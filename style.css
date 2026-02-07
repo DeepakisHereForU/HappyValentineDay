@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #5a2d2d;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.hearts-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="%23ff6b8b" opacity="0.1" d="M50,30 A20,20 0 0,1 50,70 A20,20 0 0,1 50,30 M30,50 A20,20 0 0,0 70,50 A20,20 0 0,0 30,50"/></svg>');
+    background-size: 100px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    animation: fadeIn 2s ease-in;
+}
+
+header h1 {
+    color: #ff3366;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.proposal-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(255, 51, 102, 0.2);
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    animation: slideUp 1s ease-out;
+}
+
+.proposal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #ff3366, #ff6b8b, #ff3366);
+}
+
+.card-content h2 {
+    color: #ff3366;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+.message p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.question-box {
+    text-align: center;
+    margin: 40px 0;
+    padding: 30px;
+    background: linear-gradient(135deg, #fff0f5, #ffe6ee);
+    border-radius: 15px;
+    border: 3px dashed #ff3366;
+}
+
+#question {
+    font-size: 2.5em;
+    color: #ff3366;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+.heart-pulse {
+    font-size: 4em;
+    animation: heartbeat 1.5s infinite;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.yes-btn {
+    background: linear-gradient(135deg, #ff3366, #ff6b8b);
+    color: white;
+    box-shadow: 0 5px 15px rgba(255, 51, 102, 0.4);
+}
+
+.yes-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(255, 51, 102, 0.6);
+}
+
+.no-btn {
+    background: #f0f0f0;
+    color: #666;
+}
+
+.no-btn:hover {
+    background: #e0e0e0;
+    transform: scale(0.95);
+}
+
+.hidden {
+    display: none;
+}
+
+#responseMessage {
+    text-align: center;
+    margin-top: 30px;
+    animation: fadeIn 1s ease-in;
+}
+
+#happyMessage {
+    color: #ff3366;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.celebration {
+    font-size: 3em;
+    margin: 20px 0;
+    animation: bounce 1s infinite;
+}
+
+.date-invite {
+    font-size: 1.3em;
+    color: #666;
+    margin-top: 20px;
+}
+
+.memories {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.memories h3 {
+    color: #ff3366;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+}
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.reason-card {
+    background: #fff5f7;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 2px solid #ffe6ee;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff3366;
+}
+
+.reason-card i {
+    font-size: 2.5em;
+    color: #ff3366;
+    margin-bottom: 15px;
+}
+
+.reason-card p {
+    color: #666;
+    font-size: 1.1em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #666;
+}
+
+.heart-beat {
+    color: #ff3366;
+    animation: heartbeat 1.5s infinite;
+    margin: 0 5px;
+}
+
+.secret-note {
+    margin-top: 10px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    #question {
+        font-size: 1.8em;
+    }
+    
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 300px;
+    }
+}

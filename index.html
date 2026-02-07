@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine? 💘</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hearts-background"></div>
+        
+        <header>
+            <h1><i class="fas fa-heart"></i> For My Special Someone <i class="fas fa-heart"></i></h1>
+        </header>
+
+        <main>
+            <div class="proposal-card">
+                <div class="card-content">
+                    <h2>My Dearest <span id="partnerName">[Their Name]</span>,</h2>
+                    
+                    <div class="message">
+                        <p>From the moment we met, you've filled my life with joy and love.</p>
+                        <p>Every day with you is special, but today I want to ask you something important...</p>
+                    </div>
+
+                    <div class="question-box">
+                        <h3 id="question">Will you be my Valentine?</h3>
+                        <div class="heart-pulse">💖</div>
+                    </div>
+
+                    <div class="buttons">
+                        <button id="yesBtn" class="yes-btn">
+                            <i class="fas fa-heart"></i> YES! A Thousand Times YES! <i class="fas fa-heart"></i>
+                        </button>
+                        <button id="noBtn" class="no-btn">Maybe later...</button>
+                    </div>
+
+                    <div id="responseMessage" class="hidden">
+                        <h3 id="happyMessage">You've made me the happiest person in the world! 💕</h3>
+                        <div class="celebration">
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-heart"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <p class="date-invite">Let's celebrate on February 14th! I have something special planned for us. 😊</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="memories">
+                <h3><i class="fas fa-memory"></i> Reasons Why I Love You:</h3>
+                <div class="reasons">
+                    <div class="reason-card">
+                        <i class="fas fa-smile"></i>
+                        <p>Your smile brightens my darkest days</p>
+                    </div>
+                    <div class="reason-card">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <p>Your kindness touches everyone around you</p>
+                    </div>
+                    <div class="reason-card">
+                        <i class="fas fa-laugh"></i>
+                        <p>Your laughter is my favorite sound</p>
+                    </div>
+                    <div class="reason-card">
+                        <i class="fas fa-star"></i>
+                        <p>You make every moment magical</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with <i class="fas fa-heart heart-beat"></i> by [Your Name]</p>
+            <p class="secret-note">P.S. You're the answer to every prayer I didn't even know to pray</p>
+        </footer>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="https://assets.codepen.io/1468070/Springtime.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
